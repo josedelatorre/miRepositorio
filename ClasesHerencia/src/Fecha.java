@@ -42,8 +42,8 @@ public class Fecha {
     }
 		
     public boolean fechaCorrecta() {
-        boolean diaCorrecto, mesCorrecto, añoCorrecto;
-        añoCorrecto = anyo > 0;
+        boolean diaCorrecto, mesCorrecto, anyoCorrecto;
+        anyoCorrecto = anyo > 0;
         mesCorrecto = mes >= 1 && mes <= 12;
         switch (mes) {
             case 2:
@@ -62,7 +62,7 @@ public class Fecha {
             default:
                 diaCorrecto = dia >= 1 && dia <= 31;
         }
-        return diaCorrecto && mesCorrecto && añoCorrecto;
+        return diaCorrecto && mesCorrecto && anyoCorrecto;
     }
 	
     public void diaSiguiente() {

@@ -37,15 +37,15 @@ public class Persona {
 	// OTROS METODOS
 	public boolean esMayorDeEdad() {
 		Calendar hoy = Calendar.getInstance();
-		int añoActual = hoy.get(Calendar.YEAR);
+		int anyoCorrecto = hoy.get(Calendar.YEAR);
 		int mesActual = hoy.get(Calendar.MONTH) + 1;
 		int diaActual = hoy.get(Calendar.DAY_OF_MONTH);
-		if (añoActual - fechaNacimiento.getAnyo() > 18) {
+		if (anyoCorrecto - fechaNacimiento.getAnyo() > 18) {
 			return true;
-		} else if (añoActual - fechaNacimiento.getAnyo() == 18
+		} else if (anyoCorrecto - fechaNacimiento.getAnyo() == 18
 				&& mesActual > fechaNacimiento.getMes()) {
 			return true;
-		} else if (añoActual - fechaNacimiento.getAnyo() == 18
+		} else if (anyoCorrecto - fechaNacimiento.getAnyo() == 18
 				&& mesActual == fechaNacimiento.getMes()
 				&& diaActual >= fechaNacimiento.getDia()) {
 			return true;
@@ -64,9 +64,9 @@ public class Persona {
 		Persona p1 = new Persona("Pepe", 25, 1, 2016);
 		Persona p2 = new Persona("Jesus", 4, 8, 1985);
 		System.out.println(p1.toString());
-		System.out.println("¿Es mayor de edad?=" + p1.esMayorDeEdad());
+		System.out.println("ï¿½Es mayor de edad?=" + p1.esMayorDeEdad());
 		System.out.println(p2.toString());
-		System.out.println("¿Es mayor de edad?=" + p2.esMayorDeEdad());
+		System.out.println("ï¿½Es mayor de edad?=" + p2.esMayorDeEdad());
 
 	}
 }
